@@ -1,7 +1,8 @@
 package nackademin.mackansw;
 
-public class Animal implements IEat {
+public class Animal implements IEat { //Polymorfism
 
+    //Encapsulation, basic animal properties
     private String name;
     private double weight;
     private FoodTypes foodType;
@@ -11,6 +12,13 @@ public class Animal implements IEat {
         this.weight = weight;
         this.foodType = foodType;
     }
+
+    @Override
+    public double calculateFood() {
+        return 20;
+    }
+
+    /* Encapsulation */
 
     public void setName(String name) {
         this.name = name;
@@ -34,10 +42,5 @@ public class Animal implements IEat {
 
     public FoodTypes getFoodType() {
         return this.foodType;
-    }
-
-    @Override
-    public double calculateFood() {
-        return 0;
     }
 }
