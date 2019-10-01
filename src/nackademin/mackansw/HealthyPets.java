@@ -4,11 +4,15 @@ import javax.swing.*;
 
 public class HealthyPets {
 
+    //Encapsulation
     private Dog d1 = new Dog("Sixten", 5, FoodTypes.Dogfood);
     private Dog d2 = new Dog("Dogge", 10, FoodTypes.Dogfood);
     private Cat c = new Cat("Venus", 5, FoodTypes.Catfood);
     private Snake s = new Snake("Hypno", 1, FoodTypes.Snakepellet);
 
+    /**
+     * Takes input and checks if it matches an animal
+     */
     private void startInputDialog() {
         boolean dialog = true;
         while(dialog) {
@@ -37,7 +41,7 @@ public class HealthyPets {
                 }
             }
             catch(NullPointerException e) {
-                dialog = false;
+                dialog = false; //Breaks the loop if the input box is closed
             }
         }
     }

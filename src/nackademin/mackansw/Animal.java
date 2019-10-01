@@ -1,8 +1,8 @@
 package nackademin.mackansw;
 
-public class Animal implements IEat { //Polymorfism
+public class Animal implements IEat { //Polymorphism
 
-    //Encapsulation, basic animal properties
+    //Encapsulation
     private String name;
     private double weight;
     private FoodTypes foodType;

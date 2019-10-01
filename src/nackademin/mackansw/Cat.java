@@ -1,6 +1,6 @@
 package nackademin.mackansw;
 
-public class Cat extends Animal { //Polymorfism
+public class Cat extends Animal { //Polymorphism
 
     public Cat(String name, int weight, FoodTypes foodType) {
         super(name, weight, foodType);
