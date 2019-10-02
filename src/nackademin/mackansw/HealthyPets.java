@@ -42,11 +42,11 @@ public class HealthyPets {
                     dialog = false;
                 }
                 else {
-                    output = input + " matches no animal!";
+                    output = input + " matched no animal!";
                 }
+                JOptionPane.showMessageDialog(null, output);
             }
         }
-        JOptionPane.showMessageDialog(null, output);
     }
 
     public static void main(String args[]) {

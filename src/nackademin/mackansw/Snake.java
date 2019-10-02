@@ -9,6 +9,6 @@ public class Snake extends Animal { //Polymorphism
     @Override
     public double calculateFood() {
         super.calculateFood();
-        return super.calculateFood();
+        return 20;
     }
 }

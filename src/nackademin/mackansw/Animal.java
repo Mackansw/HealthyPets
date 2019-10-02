@@ -15,7 +15,7 @@ public class Animal implements IEat { //Polymorphism
 
     @Override
     public double calculateFood() {
-        return 20;
+        return 0;
     }
 
     /* Encapsulation */
