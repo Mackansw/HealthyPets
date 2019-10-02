@@ -14,36 +14,39 @@ public class HealthyPets {
      * Takes input and checks if it matches an animal
      */
     private void startInputDialog() {
+        String output = "";
         boolean dialog = true;
+
         while(dialog) {
 
             String input = JOptionPane.showInputDialog("Which animal should be fed?");
 
-            try {
+            if(input == null) {
+                dialog = false;
+            }
+            else {
                 if(input.equals(d1.getName())) {
-                    JOptionPane.showMessageDialog(null, d1.getName() + " should have " + d1.calculateFood() + "g " + d1.getFoodType() + "!");
+                    output = d1.getName() + " should have " + d1.calculateFood() + "g " + d1.getFoodType() + "!";
                     dialog = false;
                 }
                 else if(input.equals(d2.getName())) {
-                    JOptionPane.showMessageDialog(null, d2.getName() + " should have " + d2.calculateFood() + "g " + d2.getFoodType() +  "!");
+                    output = d2.getName() + " should have " + d2.calculateFood() + "g " + d2.getFoodType() + "!";
                     dialog = false;
                 }
                 else if(input.equals(c.getName())) {
-                    JOptionPane.showMessageDialog(null, c.getName() + " should have " + c.calculateFood() + "g " + c.getFoodType() + "!");
+                    output = c.getName() + " should have " + c.calculateFood() + "g " + c.getFoodType() + "!";
                     dialog = false;
                 }
                 else if(input.equals(s.getName())) {
-                    JOptionPane.showMessageDialog(null, s.getName() + " should have " + s.calculateFood() + "g " + s.getFoodType() + "!");
+                    output = s.getName() + " should have " + s.calculateFood() + "g " + s.getFoodType() + "!";
                     dialog = false;
                 }
                 else {
-                    JOptionPane.showMessageDialog(null, input + " matched no animal!");
+                    output = input + " matches no animal!";
                 }
             }
-            catch(NullPointerException e) {
-                dialog = false; //Breaks the loop if the input box is closed
-            }
         }
+        JOptionPane.showMessageDialog(null, output);
     }
 
     public static void main(String args[]) {
